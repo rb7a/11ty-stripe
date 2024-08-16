@@ -41,8 +41,8 @@ exports.handler = async ({ body }) => {
                 allowed_countries: ['FR', 'BE', 'CH', 'LU'],
             },
             mode: 'payment',
-            success_url: 'https://test-ecommerce11ty.netlify.app/success',
-            cancel_url: 'https://test-ecommerce11ty.netlify.app/',
+            success_url: `${process.env.URL}/success.html`,
+            cancel_url: process.env.URL,
         })
 
         return {
